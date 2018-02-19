@@ -46,3 +46,12 @@ CREATE TABLE historial(
   CONSTRAINT historial_pk PRIMARY KEY (cod_puesto, cod_emp)
 );
 
+ALTER TABLE empleados ADD (NIF CHAR(10) CONSTRAINT empleados_nn4 NOT NULL
+  CONSTRAINT  empleados_uk2 UNIQUE
+  );
+
+ALTER TABLE departamentos DROP UNIQUE (nombre_dep);
+
+ALTER TABLE localizaciones RENAME TO locations;
+
+
